@@ -476,6 +476,10 @@ func (session *Session) SetLanguage(lang string) {
 	session.language = lang
 }
 
+func (session *Session) GetClient() *http.Client {
+	return session.client
+}
+
 func NewSessionWithAPIKey(apiKey string) *Session {
 	return &Session{
 		client:   &http.Client{},
